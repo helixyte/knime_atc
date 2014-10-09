@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.knime.workbench.repository.nodes">
+      <node
+            category-path="/community"
+            expert-flag="false"
+            factory-class="com.cenix.atc.ATCNodeFactory"
+            id="com.cenix.atc.ATCNodeFactory">
+      </node>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.cenix.atc.prefs.ATCPreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.knime.workbench.ui.preferences"
+            class="com.cenix.atc.ATCPreferencePage"
+            id="com.cenix.atc.ATCPreferencePage"
+            name="Assisted Table Creator">
+      </page>
+   </extension>
+
+</plugin>

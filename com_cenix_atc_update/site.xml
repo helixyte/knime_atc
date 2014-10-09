@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Scripted Table Creator">
+      Update site for the Scripted Table Creator feature
+   </description>
+   <feature url="features/com.cenix.atc.feature_1.0.0.201410091531.jar" id="com.cenix.atc.feature" version="1.0.0.201410091531"/>
+</site>

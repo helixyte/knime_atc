@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE knimeNode PUBLIC "-//UNIKN//DTD KNIME Node 2.0//EN" "http://www.knime.org/Node.dtd">
+<knimeNode icon="./atc_icon.png" type="Source">
+
+    <name>Assisted Table Creator</name>
+
+    <shortDescription>
+        Template-assisted creation of tables within KNIME.
+    </shortDescription>
+
+    <fullDescription>
+        <intro>
+            <p>
+            	This node allows the creation of a new data table using a dynamically generated user
+            	interface for the column value input. The column names and types of the new table
+            	are pre-configured with a <a href="http://rgg.r-forge.r-project.org/index.html">RGG</a> 
+            	template.
+            </p>
+        </intro>
+
+        <option name="Scipt Editor/Unlink from Template">Gives access to the R script after adaptation by the GUI.
+        </option>
+        <option name="Scipt Editor/Edit Template">Gives access to the RGG template.
+        </option>
+        <option name="Templates/Refresh">Reloads the template file.
+        </option>
+        <option name="Templates/Gallery">Generates a temporary webpage showing an overview of all
+        	available templates.
+        </option>
+        <option name="Templates/Description,Source">Description explains the data table to generate. 
+        	Source displays the underlying RGG template.
+        </option>
+        <option name="Templates/Use this template">Loads the GUI (alternatively, you can double-click 
+        	on the template).
+        </option>
+    </fullDescription>
+
+    <ports>
+        <outPort index="0" name="OutputDataTable">The newly created data table.
+        </outPort>
+    </ports>
+
+</knimeNode>
