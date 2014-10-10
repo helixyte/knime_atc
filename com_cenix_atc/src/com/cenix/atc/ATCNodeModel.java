@@ -104,6 +104,16 @@ public class ATCNodeModel extends AbstractTableScriptingNodeModel {
         			// Enclosing quotes are stripped from the value.
             		String varName = mat.group("name");
             		String varValue = mat.group("value");
+            		if (varValue.startsWith("\"") && varValue.endsWith("\"")) {
+            			varValue = varValue.substring(1, varValue.length() -1);
+            		}
+            		if (varValue.equals("NA")) {
+            			// This happens when the user did not supply a value for
+            			// a variable. At the moment, we can not detect whether
+            			// this is a mandatory variable or not, so we just 
+            			// continue.
+            			continue;
+            		}
             		this.colNames.add(varName);
             		Class<? extends DataCell> defaultDataCellClass = null; 
             		if (this.variableTypeMap.containsKey(varName)) {
@@ -114,9 +124,6 @@ public class ATCNodeModel extends AbstractTableScriptingNodeModel {
             			defaultDataCellClass = StringCell.class;
             		}
             		this.colTypes.add(DataType.getType(defaultDataCellClass));
-            		if (varValue.startsWith("\"") && varValue.endsWith("\"")) {
-            			varValue = varValue.substring(1, varValue.length() -1);
-            		}
             		if (this.variableItemIdMap.containsKey(varName)) {
             			// If this was a combobox or listbox variable, we have 
             			// to look up the ID for the selected item.
