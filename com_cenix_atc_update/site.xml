@@ -3,5 +3,5 @@
    <description name="Scripted Table Creator">
       Update site for the Scripted Table Creator feature
    </description>
-   <feature url="features/com.cenix.atc.feature_1.0.0.201410101136.jar" id="com.cenix.atc.feature" version="1.0.0.201410101136"/>
+   <feature url="features/com.cenix.atc.feature_1.0.0.201410101352.jar" id="com.cenix.atc.feature" version="1.0.0.201410101352"/>
 </site>
