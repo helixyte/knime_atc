@@ -88,7 +88,7 @@ public class ATCNodeModel extends AbstractTableScriptingNodeModel {
     	this.colTypes.clear();
     	this.colValues.clear();
         String rScript = script.getStringValue();
-        Pattern pat = Pattern.compile("(?<name>\\w+) ?(=|<-) ?(?<value>.+)");
+        Pattern pat = Pattern.compile("(?<name>[\\w\\.#]+) ?(=|<-) ?(?<value>.+)");
         // Build a map of variable names to data cell types.
         this.buildMaps();
         if (rScript != null) {
